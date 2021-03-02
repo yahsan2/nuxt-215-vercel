@@ -23,7 +23,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ["@nuxtjs/style-resources"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["nuxt-i18n", "nuxt-svg-loader"],
@@ -32,4 +32,17 @@ export default {
   build: {},
 
   target: "server",
+
+  styleResources: {
+    scss: [
+      "bootstrap/scss/_functions.scss",
+      "bootstrap/scss/_variables.scss",
+      "bootstrap/scss/_mixins.scss",
+      "bootstrap/scss/_grid.scss",
+      "./assets/scss/mixins/*.scss",
+      "./assets/scss/config/_colors.scss",
+      "./assets/scss/functions/*.scss",
+      "./assets/scss/_config.scss",
+    ],
+  },
 };
