@@ -1,0 +1,100 @@
+// Overwrite Bootstrap vars here
+// Reference: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+
+// Options
+$enable-rounded: true;
+$enable-shadows: false;
+
+// Defaults
+$font-weight-bold: 700;
+$font-size-base: 1rem;
+$font-size-lg: $font-size-base * 1.25;
+$spacer: 1rem;
+$line-height-lg: 1.5;
+
+// Colors
+$earth-300: hsla(29, 94, 86, 1);
+$earth-500: hsla(29, 100, 71, 1);
+$grass-300: hsla(160, 43, 68, 1);
+$grass-500: hsla(175, 100, 37, 1);
+$sky-300: hsla(196, 66, 79, 1);
+$sky-500: hsla(214, 78, 48, 1);
+$playful-300: hsla(341, 91, 82, 1);
+$playful-500: hsla(5, 99, 63, 1);
+$black: hsla(0, 0, 0, 1);
+$dark: $black;
+
+$theme-colors: (
+  'earth-300': $earth-300,
+  'earth-500': $earth-500,
+  'grass-300': $grass-300,
+  'grass-500': $grass-500,
+  'sky-300': $sky-300,
+  'sky-500': $sky-500,
+  'playful-300': $playful-300,
+  'playful-500': $playful-500,
+  'dark': $dark,
+);
+
+// Body
+$body-color: $dark;
+
+// Typography styling
+$font-family-sans-serif: 'F37 Ginger';
+$font-family-base: $font-family-sans-serif;
+$headings-font-family: $font-family-sans-serif;
+
+$default-font-size: 16px;
+$small-font-size: rem(14px);
+
+$line-height-base: 1.75;
+
+$h1-font-size: rem(44px);
+$h2-font-size: rem(32px);
+$h3-font-size: rem(20px);
+$h4-font-size: rem(16px);
+
+// Heading styles
+$h1-font-weight: $font-weight-bold;
+$h2-font-weight: $font-weight-bold;
+$h3-font-weight: $font-weight-bold;
+$h4-font-weight: $font-weight-bold;
+
+$h1-margin-bottom: $spacer;
+$h2-margin-bottom: $spacer / 2;
+$h3-margin-bottom: $spacer / 2;
+$h4-margin-bottom: $spacer / 2;
+
+$hr-margin-y: $spacer * 2;
+
+// Buttons
+$btn-padding-y: rem(12px);
+$btn-padding-x: rem(32px);
+$btn-border-radius: rem(24px);
+$btn-icon-width: rem(16px);
+$btn-icon-width-lg: rem(20px);
+
+$btn-border-radius-sm: rem(24px);
+$btn-padding-y-sm: rem(6px);
+$btn-padding-x-sm: rem(20px);
+
+$btn-border-radius-lg: rem(24px);
+$btn-padding-y-lg: rem(16px);
+$btn-padding-x-lg: rem(24px);
+$btn-font-size-lg: $font-size-lg;
+$btn-line-height-lg: $line-height-lg;
+
+// Links
+$link-color: theme-color('dark');
+
+// Paragraphs
+$paragraph-margin-bottom: rem(24px);
+
+// Components
+$component-active-color: $earth-500;
+$component-active-bg: $earth-500;
+
+// Icons
+$icon-size-sm: rem(18px);
+$icon-size: rem(24px);
+$icon-size-lg: rem(32px);

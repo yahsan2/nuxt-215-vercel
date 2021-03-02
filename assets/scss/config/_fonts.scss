@@ -1,0 +1,40 @@
+$font-variants: (
+  100: thin,
+  300: light,
+  400: regular,
+  700: bold,
+);
+
+$font-variants-italic: (
+  100: thinitalic,
+  300: lightitalic,
+  700: bolditalic,
+);
+
+// F37 Ginger
+@each $value, $name in $font-variants {
+  @font-face {
+    src: url('../fonts/f37ginger-#{$name}-webfont.woff2') format('woff2'),
+      url('../fonts/f37ginger-#{$name}-webfont.woff') format('woff');
+    font: {
+      family: 'F37 Ginger';
+      style: normal;
+      weight: $value;
+      display: fallback;
+    }
+  }
+}
+
+// F37 Ginger Italic
+@each $value, $name in $font-variants-italic {
+  @font-face {
+    src: url('../fonts/f37ginger-#{$name}-webfont.woff2') format('woff2'),
+      url('../fonts/f37ginger-#{$name}-webfont.woff') format('woff');
+    font: {
+      family: 'F37 Ginger';
+      style: italic;
+      weight: $value;
+      display: fallback;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+// HSLA color functions
+// return css color variable with different opacity value
+@function alpha($color, $alpha) {
+  $color-value: get-value-if-key-exists($hsl-colors, $color);
+  $color-h: nth($color-value, 1);
+  $color-s: nth($color-value, 2);
+  $color-l: nth($color-value, 3);
+
+  @return hsla($color-h, $color-s, $color-l, $alpha);
+}
+
+@function saturation($color, $saturation, $alpha: 1) {
+  $color-value: get-value-if-key-exists($hsl-colors, $color);
+  $color-h: nth($color-value, 1);
+  $color-l: nth($color-value, 3);
+
+  @return hsla($color-h, $saturation, $color-l, $alpha);
+}
+
+@function lightness($color, $lightness, $alpha: 1) {
+  $color-value: get-value-if-key-exists($hsl-colors, $color);
+  $color-h: nth($color-value, 1);
+  $color-s: nth($color-value, 2);
+
+  @return hsla($color-h, $color-s, $lightness, $alpha);
+}
+
+@mixin defineColorHSL($color, $hue, $saturation, $lightness) {
+  --#{$color}: hsl(#{$hue}, #{$saturation}, #{$lightness});
+}
+
+@mixin defineShadeHSL($var, $hue, $saturation, $lightness, $shadeCount) {
+  @for $count from 1 through $shadeCount {
+    $dark: $lightness - ($hsl-shade-bump * $count);
+    $light: $lightness + ($hsl-shade-bump * $count);
+
+    @if $dark >= 0 {
+      @include defineColorHSL(#{$var}-d#{$count}, $hue, $saturation, $dark);
+    }
+
+    @if $light <= 100% {
+      @include defineColorHSL(#{$var}-l#{$count}, $hue, $saturation, $light);
+    }
+  }
+}

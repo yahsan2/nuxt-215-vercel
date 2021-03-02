@@ -1,0 +1,12 @@
+// Spacers
+.block {
+  margin-bottom: rem(60px);
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: rem(90px);
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: rem(120px);
+  }
+}

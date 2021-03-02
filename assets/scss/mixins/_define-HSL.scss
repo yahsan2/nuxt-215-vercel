@@ -1,0 +1,18 @@
+@mixin defineColorHSL($color, $hue, $saturation, $lightness) {
+  --#{$color}: hsl(#{$hue}, #{$saturation}, #{$lightness});
+}
+
+@mixin defineShadeHSL($var, $hue, $saturation, $lightness, $shadeCount) {
+  @for $count from 1 through $shadeCount {
+    $dark: $lightness - ($hsl-shade-bump * $count);
+    $light: $lightness + ($hsl-shade-bump * $count);
+
+    @if $dark >= 0 {
+      @include defineColorHSL(#{$var}-d#{$count}, $hue, $saturation, $dark);
+    }
+
+    @if $light <= 100% {
+      @include defineColorHSL(#{$var}-l#{$count}, $hue, $saturation, $light);
+    }
+  }
+}

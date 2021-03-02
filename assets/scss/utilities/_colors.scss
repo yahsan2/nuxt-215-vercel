@@ -1,0 +1,43 @@
+// stylelint-disable declaration-no-important
+@each $var, $color-value in $hsl-colors {
+  $shadeCount: $hsl-shades;
+  $hue: nth($color-value, 1);
+  $saturation: nth($color-value, 2);
+  $lightness: nth($color-value, 3);
+
+  .text-#{$var} {
+    color: var(--#{$var}) !important;
+  }
+
+  .bg-#{$var} {
+    background-color: var(--#{$var}) !important;
+  }
+
+  @if $hsl-shades > 0 {
+    @for $count from 1 through $shadeCount {
+      $dark: $lightness - ($hsl-shade-bump * $count);
+      $light: $lightness + ($hsl-shade-bump * $count);
+
+      @if $dark >= 0 {
+        .text-#{$var}-d#{$count} {
+          color: hsl($hue, $saturation, $dark) !important;
+        }
+
+        .bg-#{$var}-d#{$count} {
+          background-color: hsl($hue, $saturation, $dark) !important;
+        }
+      }
+
+      @if $light <= 100% {
+        .text-#{$var}-l#{$count} {
+          color: hsl($hue, $saturation, $light) !important;
+        }
+
+        .bg-#{$var}-l#{$count} {
+          background-color: hsl($hue, $saturation, $light) !important;
+        }
+      }
+    }
+  }
+}
+// stylelint-enable declaration-no-important

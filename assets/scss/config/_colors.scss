@@ -1,0 +1,70 @@
+// Usage as hsl(a) color
+// hsl                   - var(--color-alpha);
+// hsla                  - alpha(color-alpha, .1);
+// hsla saturation       - saturation(color-alpha, 80%);
+// hsla saturation/alpha - saturation(color-alpha, 80%, .1);
+// hsla lightness        - lightness(color-alpha, 20%);
+// hsla lightness/alpha  - lightness(color-alpha, 20%, .1);
+// Use default lightness and darkness
+// Lighter               - var(--color-alpha-l1);
+// Darker                - var(--color-alpha-l1);
+// Color helpers
+// Text color            - .text-color-alpha or .text-color-alpha-d1
+// background color      - .bg-color-alpha or .bg-color-alpha-d1
+
+$hsl-colors: (
+  color-alpha: (
+    230,
+    52,
+    20,
+    1,
+  ),
+  color-beta: (
+    201,
+    88%,
+    23%,
+  ),
+  color-gamma: (
+    0,
+    100%,
+    38%,
+  ),
+  color-delta: (
+    214,
+    33%,
+    96%,
+  ),
+  color-epsilon: (
+    202,
+    62%,
+    44%,
+  ),
+  color-dark: (
+    0,
+    0%,
+    20%,
+  ),
+  color-light: (
+    0,
+    0%,
+    100%,
+  ),
+);
+
+// Define the amount of darker/lighter shades of the colors
+$hsl-shades: 2;
+$hsl-shade-bump: 5;
+
+:root {
+  @each $var, $color-value in $hsl-colors {
+    $hue: nth($color-value, 1);
+    $saturation: nth($color-value, 2);
+    $lightness: nth($color-value, 3);
+
+    @include defineColorHSL($var, $hue, $saturation, $lightness);
+
+    @if $hsl-shades > 0 {
+      @include defineShadeHSL($var, $hue, $saturation, $lightness, $hsl-shades);
+    }
+  }
+}

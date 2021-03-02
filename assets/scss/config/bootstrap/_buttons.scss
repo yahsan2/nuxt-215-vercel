@@ -1,0 +1,26 @@
+.btn {
+  svg {
+    width: $btn-icon-width;
+  }
+
+  &.btn-lg {
+    svg {
+      width: $btn-icon-width-lg;
+    }
+  }
+
+  &.btn-earth-500 {
+    color: $dark;
+
+    &:hover {
+      background-color: $earth-300;
+    }
+  }
+
+  &.btn-icon-only {
+    padding: {
+      right: rem(24px);
+      left: rem(24px);
+    }
+  }
+}

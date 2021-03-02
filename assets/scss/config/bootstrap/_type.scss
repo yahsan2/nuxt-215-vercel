@@ -1,0 +1,31 @@
+// Overwrite default styling for individual headings
+
+h1,
+.h1 {
+  margin-bottom: $h1-margin-bottom;
+  font-weight: $h1-font-weight;
+}
+
+h2,
+.h2 {
+  margin-bottom: $h2-margin-bottom;
+  font-weight: $h2-font-weight;
+}
+
+h3,
+.h3 {
+  margin-bottom: $h3-margin-bottom;
+  font-weight: $h3-font-weight;
+}
+
+h4,
+.h4 {
+  margin-bottom: $h4-margin-bottom;
+  font-weight: $h4-font-weight;
+}
+
+.rt-content {
+  > :last-child() {
+    margin-bottom: unset;
+  }
+}

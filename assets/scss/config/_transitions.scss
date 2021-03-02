@@ -1,0 +1,9 @@
+// Beziers, we get them from here: https://easings.net/
+$bezier-ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+$bezier-ease-in-out-sine: cubic-bezier(0.37, 0, 0.63, 1);
+
+// Transition durations
+$transition-short: 200ms;
+$transition-medium: 400ms;
+$transition-long: 600ms;
+$transition-extra-long: 2000ms;

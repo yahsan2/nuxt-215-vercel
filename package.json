@@ -9,8 +9,17 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
-    "nuxt": "^2.15.2"
+    "@nuxtjs/style-resources": "^1.0.0",
+    "bootstrap": "^4.6.0",
+    "contentful": "^8.1.7",
+    "cross-env": "^7.0.0",
+    "node-sass": "^4.13.1",
+    "nuxt": "^2.14.12",
+    "nuxt-i18n": "^6.20.1",
+    "nuxt-svg-loader": "^1.2.0",
+    "sass-loader": "^10.1.1",
+    "sass-resources-loader": "^2.1.1",
+    "core-js": "^3.8.3"
   },
   "devDependencies": {}
 }
