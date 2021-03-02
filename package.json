@@ -10,37 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "nuxt": "^2.15.2",
-    "@nuxtjs/style-resources": "^1.0.0",
-    "bootstrap": "^4.6.0",
-    "contentful": "^8.1.7",
-    "cross-env": "^7.0.0",
-    "nuxt-i18n": "^6.20.1",
-    "nuxt-svg-loader": "^1.2.0",
-    "typeface-poppins": "^1.1.13"
+    "nuxt": "^2.15.2"
   },
-  "devDependencies": {
-    "@babel/runtime-corejs2": "^7.7.7",
-    "@nuxtjs/storybook": "^3.3.1",
-    "babel-eslint": "^10.0.3",
-    "core-js": "^3.8.3",
-    "eslint": "^7.20.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-import-resolver-nuxt": "^1.0.0",
-    "eslint-loader": "^4.0.2",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-vue": "^7.6.0",
-    "nerds-and-company-prettier-config": "^0.0.4",
-    "nerds-and-company-stylelint-config": "^0.0.6",
-    "node-sass": "^4.13.1",
-    "nodemon": "^2.0.2",
-    "prettier": "^2.2.1",
-    "prettier-eslint-cli": "^5.0.0",
-    "prettier-stylelint": "^0.4.2",
-    "sass-loader": "^10.1.1",
-    "stylelint": "^13.2.0",
-    "stylelint-webpack-plugin": "^2.1.1"
-  }
+  "devDependencies": {}
 }
