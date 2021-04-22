@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "nuxt-215-vercel",
+    title: "nuxt-2152-vercel",
     htmlAttrs: {
       lang: "en",
     },
